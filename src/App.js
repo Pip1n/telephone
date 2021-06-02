@@ -40,7 +40,13 @@ export default function App() {
     setNumber(number + 9);
   }
   function onClick0() {
-    setNumber(number + 0);
+    setNumber(number + "0");
+  }
+  function onClickRemove() {
+    setNumber(number.substring(0, number.length - 1));
+  }
+  function onClickC() {
+    setNumber(number.substring(0, number.length - 100000000000000000));
   }
   return (
     <div className="App">
@@ -64,7 +70,11 @@ export default function App() {
 
         <button onClick={onClick9}>9</button>
 
+        <button onClick={onClickRemove}>-</button>
+
         <button onClick={onClick0}>0</button>
+
+        <button onClick={onClickC}>C</button>
       </header>
     </div>
   );

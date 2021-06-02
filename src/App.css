@@ -1,0 +1,12 @@
+.App{
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+.button {
+    background-color: rgb(221, 230, 235);
+    border: rgb(51, 59, 70);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}

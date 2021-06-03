@@ -1,13 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
-import Grid from "@material-ui/core/Grid";
-
 import "./App.css";
 
 export default function App() {
   var [number, setNumber] = useState("");
   var display = "";
+  var status = "";
+  const regex = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+  if (regex.test(number) === true) {
+    status = "";
+  } else {
+    status = "Numero invalido";
+  }
+
   if (number === "") {
     display = "Dial the Number Here";
   } else {
@@ -53,32 +59,57 @@ export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>{display}</h1>
-
+        <input type="text" value={number} onChange={(e) => setNumber(e.target.value)} />
+        <h2>{status}</h2>
         <div className="wrapper">
-          <button onClick={onClick1}>1</button>
+          <button className="button" onClick={onClick1}>
+            1
+          </button>
 
-          <button onClick={onClick2}>2</button>
+          <button className="button" onClick={onClick2}>
+            2
+          </button>
 
-          <button onClick={onClick3}>3</button>
+          <button className="button" onClick={onClick3}>
+            3
+          </button>
 
-          <button onClick={onClick4}>4</button>
+          <button className="button" onClick={onClick4}>
+            4
+          </button>
 
-          <button onClick={onClick5}>5</button>
+          <button className="button" onClick={onClick5}>
+            5
+          </button>
 
-          <button onClick={onClick6}>6</button>
+          <button className="button" onClick={onClick6}>
+            6
+          </button>
 
-          <button onClick={onClick7}>7</button>
+          <button className="button" onClick={onClick7}>
+            7
+          </button>
 
-          <button onClick={onClick8}>8</button>
+          <button className="button" onClick={onClick8}>
+            8
+          </button>
 
-          <button onClick={onClick9}>9</button>
+          <button className="button" onClick={onClick9}>
+            9
+          </button>
 
-          <button onClick={onClickRemove}>-</button>
+          <button className="button" onClick={onClickRemove}>
+            -
+          </button>
 
-          <button onClick={onClick0}>0</button>
+          <button className="button" onClick={onClick0}>
+            0
+          </button>
 
-          <button onClick={onClickC}>C</button>
+          <button className="button" onClick={onClickC}>
+            C
+          </button>
+          <a href={"tel:" + number}></a>
         </div>
       </header>
     </div>

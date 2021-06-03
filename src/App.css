@@ -1,17 +1,41 @@
+html{
+background-color: rgb(59, 58, 58);
+}
+
+input{
+    font-size: 32px;
+    color:whitesmoke;
+    padding: 20px;
+    background-color: transparent;
+    border:none;
+    
+}
+h2{
+    color: whitesmoke;
+}
+
 .App{
     margin: 0 auto;
     max-width: 800px;
     text-align: center;
 }
 .button {
-    background-color: rgb(221, 230, 235);
-    border: rgb(51, 59, 70);
+    color:rgb(168, 186, 241);
+    background-color: rgb(92, 93, 97);
+    border:none;
     padding: 10px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
 }
 .wrapper {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 100px 100px 100px;
+    justify-content:center;
+}
+.flex-grid {
+    display: flex;
+}
+.col {
+    flex: 1;
 }

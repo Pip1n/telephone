@@ -33,9 +33,14 @@ h2{
     grid-template-columns: 100px 100px 100px;
     justify-content:center;
 }
-.flex-grid {
+
+.BigRingRing{
     display: flex;
+    justify-content:center;
+    margin:10px;
 }
-.col {
-    flex: 1;
+
+.ringRing{
+    width:40px;
+    
 }

@@ -109,8 +109,10 @@ export default function App() {
           <button className="button" onClick={onClickC}>
             C
           </button>
-          <a href={"tel:" + number}></a>
         </div>
+        <a className="BigRingRing" href={"tel:" + number}>
+          <img className="ringRing" src="https://freesvg.org/img/phone-call-icon.png" alt="lol just ring lmao"></img>
+        </a>
       </header>
     </div>
   );

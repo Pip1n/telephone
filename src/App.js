@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
+import Grid from "@material-ui/core/Grid";
+
 import "./App.css";
 
 export default function App() {
@@ -52,29 +54,32 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <h1>{display}</h1>
-        <button onClick={onClick1}>1</button>
 
-        <button onClick={onClick2}>2</button>
+        <div className="wrapper">
+          <button onClick={onClick1}>1</button>
 
-        <button onClick={onClick3}>3</button>
+          <button onClick={onClick2}>2</button>
 
-        <button onClick={onClick4}>4</button>
+          <button onClick={onClick3}>3</button>
 
-        <button onClick={onClick5}>5</button>
+          <button onClick={onClick4}>4</button>
 
-        <button onClick={onClick6}>6</button>
+          <button onClick={onClick5}>5</button>
 
-        <button onClick={onClick7}>7</button>
+          <button onClick={onClick6}>6</button>
 
-        <button onClick={onClick8}>8</button>
+          <button onClick={onClick7}>7</button>
 
-        <button onClick={onClick9}>9</button>
+          <button onClick={onClick8}>8</button>
 
-        <button onClick={onClickRemove}>-</button>
+          <button onClick={onClick9}>9</button>
 
-        <button onClick={onClick0}>0</button>
+          <button onClick={onClickRemove}>-</button>
 
-        <button onClick={onClickC}>C</button>
+          <button onClick={onClick0}>0</button>
+
+          <button onClick={onClickC}>C</button>
+        </div>
       </header>
     </div>
   );
